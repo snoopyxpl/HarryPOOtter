@@ -1,7 +1,9 @@
 package main.java.Character;
+
 import java.util.ArrayList;
 import java.util.List;
-public class Wizzard extends Character{
+
+public class Wizzard extends Character {
     private String wizzardname;
     private Pet pet;
     private Wand wand;
@@ -13,9 +15,10 @@ public class Wizzard extends Character{
 
     public Wizzard(String wizzardname, Pet pet, Wand wand, House house, List<PotionType> potions, int coins,int lifepoint, double damagereseitancebonus, double damageresitance, double defance,
     double damagebonus, int spelldamage, int potionbonus, int precision, int precisionsto, int precisionbonus,
-    double damage,List<Spell> masteredspell) {
-        super(lifepoint, damagereseitancebonus, damageresitance, defance, damagebonus, spelldamage, potionbonus, precision,
-        precisionsto, precisionbonus, damage);
+            double damage, List<Spell> masteredspell) {
+        super(lifepoint, damagereseitancebonus, damageresitance, defance, damagebonus, spelldamage, potionbonus,
+                precision,
+                precisionsto, precisionbonus, damage);
         this.wizzardname = wizzardname;
         this.pet = pet;
         this.wand = wand;
@@ -112,6 +115,3 @@ public class Wizzard extends Character{
         }
     }  
     }
-
-
-
