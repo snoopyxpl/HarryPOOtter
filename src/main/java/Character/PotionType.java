@@ -5,7 +5,4 @@ public enum PotionType {
     Attack,
     Defense;
 
-    public Object getName() {
-        return null;
-    }
 }
