@@ -19,5 +19,6 @@ public abstract class AbsEnemy extends Character {
     public void setEnemyname(String enemyname) {
         this.enemyname = enemyname;
     }
+    public abstract void attack(Character target);
 
 }

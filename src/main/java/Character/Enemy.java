@@ -10,4 +10,10 @@ public class Enemy extends AbsEnemy {
                 precisionsto, precisionbonus, damage, enemyname);
     }
 
+    @Override
+    public void attack(Character target) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'attack'");
+    }
+
 }

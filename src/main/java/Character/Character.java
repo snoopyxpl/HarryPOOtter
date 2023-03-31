@@ -13,8 +13,8 @@ public abstract class Character {
     public int precisionbonus;
     private double damage;
 
-    public double getdamage(double damagebonus, int spelldamage) {
-        double damage = damagebonus * spelldamage;
+    public double getdamage(double damagebonus, Spell spell ) {
+        double damage = damagebonus * spell.getDamage();
         return damage;
     }
 
@@ -140,6 +140,10 @@ public abstract class Character {
         this.precisionsto = precisionsto;
         this.precisionbonus = precisionbonus;
         this.damage = damage;
+    }
+    public double damagetaken(double damage, double damageresitance) {
+        double lifepoint = damage * 1-(damageresitance/100);
+        return lifepoint;
     }
 
 }
