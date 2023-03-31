@@ -1,49 +1,41 @@
 package main.java.Character;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Potion {
-    private String potionname;
-    private PotionType potiontype;
-    private int value;
-    private int price;
+    private final EnumPotion potionType;
 
-    public Potion(String potionname, PotionType potiontype, int value, int price) {
-        this.potionname = potionname;
-        this.potiontype = potiontype;
-        this.value = value;
-        this.price = price;
-
+    public Potion(EnumPotion potionType) {
+        this.potionType = potionType;
     }
 
-    public int getPrice() {
-        return price;
+    public String GetName() {
+        return potionType.getName();
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public int GetPrice() {
+        return potionType.getPrice();
     }
 
-    public String getPotionname() {
-        return potionname;
+    public int GetValue() {
+        return potionType.getValue();
     }
 
-    public PotionType getPotiontype() {
-        return potiontype;
+    public PotionType GetPotionType() {
+        return potionType.getPotionType();
     }
 
-    public int getValue() {
-        return value;
+    public static List<Potion> GetAllPotions() {
+        List<Potion> potions = new ArrayList<>();
+        for (EnumPotion enumPotion : EnumPotion.values()) {
+            potions.add(new Potion(enumPotion));
+        }
+        return potions;
     }
 
-    public void setPotionname(String potionname) {
-        this.potionname = potionname;
-    }
-
-    public void setPotiontype(PotionType potiontype) {
-        this.potiontype = potiontype;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
+    public EnumPotion GetPotion() {
+        return potionType;
     }
 
 }

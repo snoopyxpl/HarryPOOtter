@@ -11,13 +11,13 @@ public enum EnumSpell {
     ;
 
     private final String name;
-    private final int damage;
+    private final int spelldamage;
     private final SpellType type;
     private final boolean forbidden;
 
-    EnumSpell(String name, int damage, SpellType type, boolean forbidden) {
+    EnumSpell(String name, int spelldamage, SpellType type, boolean forbidden) {
         this.name = name;
-        this.damage = damage;
+        this.spelldamage = spelldamage;
         this.type = type;
         this.forbidden = forbidden;
     }
@@ -27,7 +27,7 @@ public enum EnumSpell {
     }
 
     public int getDamage() {
-        return damage;
+        return spelldamage;
     }
 
     public SpellType getType() {

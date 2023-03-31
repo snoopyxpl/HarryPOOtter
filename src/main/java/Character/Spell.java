@@ -31,7 +31,7 @@ public class Spell extends AbsSpell {
     }
 
     public EnumSpell getSpell() {
-        return null;
+        return spellType;
     }
 
 }

@@ -85,7 +85,7 @@ public class Wizzard extends Character {
 
     public boolean contains(PotionType potion) {
         for (PotionType p : potions) {
-            if (p.getName().equals(potion.getName())) {
+            if (p.name().equals(potion.name())) {
                 return true;
             }
         }
@@ -95,11 +95,11 @@ public class Wizzard extends Character {
     public void add(PotionType potion) {
         if (potions.size() < MAX_POTIONS && !contains(potion)) {
             potions.add(potion);
-            System.out.println("Added " + potion.getName() + " to " + wizzardname + "'s potions!");
+            System.out.println("Added " + potion.name() + " to " + wizzardname + "'s potions!");
         } else if (potions.size() >= MAX_POTIONS) {
             System.out.println(wizzardname + "'s potion bag is already full!");
         } else {
-            System.out.println(wizzardname + " already has " + potion.getName() + " in their potion bag!");
+            System.out.println(wizzardname + " already has " + potion.name() + " in their potion bag!");
         }
     }
 
