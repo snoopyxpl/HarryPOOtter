@@ -7,7 +7,6 @@ public class Boss extends AbsEnemy {
             String enemyname) {
         super(lifepoint, damagereseitancebonus, damageresitance, defance, damagebonus, spelldamage, potionbonus, precision,
                 precisionsto, precisionbonus, damage, enemyname);
-        //TODO Auto-generated constructor stub
     }
 
     }
