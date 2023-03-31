@@ -1,8 +1,11 @@
 package main.java.Character;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class Shop {
     private List<Potion> potions;
+
     public Shop(List<Potion> potions) {
         this.potions = new ArrayList<>();
     }
@@ -16,5 +19,3 @@ public class Shop {
     }
 
 }
-
-

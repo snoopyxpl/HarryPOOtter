@@ -13,8 +13,9 @@ public class Wizzard extends Character {
     private int coins;
     private static final int MAX_POTIONS = 5;
 
-    public Wizzard(String wizzardname, Pet pet, Wand wand, House house, List<PotionType> potions, int coins,int lifepoint, double damagereseitancebonus, double damageresitance, double defance,
-    double damagebonus, int spelldamage, int potionbonus, int precision, int precisionsto, int precisionbonus,
+    public Wizzard(String wizzardname, Pet pet, Wand wand, House house, List<PotionType> potions, int coins,
+            int lifepoint, double damagereseitancebonus, double damageresitance, double defance,
+            double damagebonus, int spelldamage, int potionbonus, int precision, int precisionsto, int precisionbonus,
             double damage, List<Spell> masteredspell) {
         super(lifepoint, damagereseitancebonus, damageresitance, defance, damagebonus, spelldamage, potionbonus,
                 precision,
@@ -26,15 +27,18 @@ public class Wizzard extends Character {
         this.potions = potions;
         this.coins = coins;
         this.potions = new ArrayList<>();
-        this.masteredspell= new ArrayList<>();
-        
+        this.masteredspell = new ArrayList<>();
+
     }
-    public int getCoins(){
+
+    public int getCoins() {
         return coins;
     }
-    public void setCoins(int coins){
-        this.coins=coins;
+
+    public void setCoins(int coins) {
+        this.coins = coins;
     }
+
     public String getWizzardname() {
         return this.wizzardname;
     }
@@ -66,6 +70,7 @@ public class Wizzard extends Character {
     public void setHouse(House house) {
         this.house = house;
     }
+
     public List<PotionType> getPotions() {
         return potions;
     }
@@ -73,6 +78,7 @@ public class Wizzard extends Character {
     public void setPotions(List<PotionType> potions) {
         this.potions = potions;
     }
+
     public int size() {
         return potions.size();
     }
@@ -85,6 +91,7 @@ public class Wizzard extends Character {
         }
         return false;
     }
+
     public void add(PotionType potion) {
         if (potions.size() < MAX_POTIONS && !contains(potion)) {
             potions.add(potion);
@@ -95,6 +102,7 @@ public class Wizzard extends Character {
             System.out.println(wizzardname + " already has " + potion.getName() + " in their potion bag!");
         }
     }
+
     public List<Spell> getMasteredSpells() {
         return masteredspell;
     }
@@ -113,5 +121,5 @@ public class Wizzard extends Character {
         } else {
             System.out.println("You cannot master this spell.");
         }
-    }  
     }
+}

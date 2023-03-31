@@ -34,5 +34,4 @@ public class Spell extends AbsSpell {
         return null;
     }
 
-
 }

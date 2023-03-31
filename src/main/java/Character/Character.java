@@ -1,7 +1,7 @@
 package main.java.Character;
 
 public abstract class Character {
-    private int lifepoint ;
+    private int lifepoint;
     public double damagereseitancebonus;
     public double damageresitance;
     private double defance;
@@ -12,27 +12,31 @@ public abstract class Character {
     private int precisionsto;
     public int precisionbonus;
     private double damage;
-    
-    public double  getdamage(double damagebonus, int spelldamage){
-         double damage=damagebonus*spelldamage;
-         return damage;
+
+    public double getdamage(double damagebonus, int spelldamage) {
+        double damage = damagebonus * spelldamage;
+        return damage;
     }
-    public double  getresitance(double damagereseitancebonus, double damagereseitance){
-        double defance=damagereseitance*damagereseitancebonus;
+
+    public double getresitance(double damagereseitancebonus, double damagereseitance) {
+        double defance = damagereseitance * damagereseitancebonus;
         return defance;
-   }
-   public double updatedef(double defance){
-        double damageresitance=defance;
+    }
+
+    public double updatedef(double defance) {
+        double damageresitance = defance;
         return damageresitance;
-   }
-   public int getprecision(int precision, int precisionbonus){
-    int precisionsto=precision+precisionbonus;
-    return precisionsto;
-   }
-   public int updatepres(int precisionsto){
-    int precision=precisionsto;
-    return precision;
-   }
+    }
+
+    public int getprecision(int precision, int precisionbonus) {
+        int precisionsto = precision + precisionbonus;
+        return precisionsto;
+    }
+
+    public int updatepres(int precisionsto) {
+        int precision = precisionsto;
+        return precision;
+    }
 
     public int getLifepoint() {
         return this.lifepoint;
@@ -121,9 +125,10 @@ public abstract class Character {
     public void setDamage(double damage) {
         this.damage = damage;
     }
-    
 
-    public Character(int lifepoint, double damagereseitancebonus, double damageresitance, double defance, double damagebonus, int spelldamage, int potionbonus, int precision, int precisionsto, int precisionbonus, double damage) {
+    public Character(int lifepoint, double damagereseitancebonus, double damageresitance, double defance,
+            double damagebonus, int spelldamage, int potionbonus, int precision, int precisionsto, int precisionbonus,
+            double damage) {
         this.lifepoint = lifepoint;
         this.damagereseitancebonus = damagereseitancebonus;
         this.damageresitance = damageresitance;

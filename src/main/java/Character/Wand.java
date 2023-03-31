@@ -4,10 +4,11 @@ public class Wand {
     private Wood wood;
     private Core core;
     private double lenght;
-    public Wand(Wood wood,Core core,double lenght){
-        this.wood=wood;
-        this.core=core;
-        this.lenght=lenght;
+
+    public Wand(Wood wood, Core core, double lenght) {
+        this.wood = wood;
+        this.core = core;
+        this.lenght = lenght;
     }
 
     public Wood getWood() {

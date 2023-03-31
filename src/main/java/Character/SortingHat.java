@@ -1,5 +1,7 @@
 package main.java.Character;
+
 import java.util.Random;
+
 public class SortingHat {
 
     public static void assignHouse(Wizzard wizzard) {
@@ -11,6 +13,7 @@ public class SortingHat {
         wizzard.setHouse(house);
         assignBonus(wizzard);
     }
+
     public static void assignBonus(Wizzard wizzard) {
         House house = wizzard.getHouse();
         switch (house.getName()) {
@@ -30,5 +33,4 @@ public class SortingHat {
                 break;
         }
     }
-    }
-
+}
