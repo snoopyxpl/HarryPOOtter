@@ -6,7 +6,16 @@ import java.util.List;
 import main.java.Game.spell.EnumSpell;
 
 public enum EnumEnemy {
-  Troll(100, 0.0, 0, 0, 0.0, "Troll", Arrays.asList(EnumSpell.FIREBALL)),
+  Troll(
+    100,
+    0.0,
+    0,
+    0,
+    0.0,
+    "Troll",
+    Arrays.asList(EnumSpell.FIREBALL),
+    Troll.class
+  ),
   LordVoldemort(
     100,
     0.0,
@@ -14,8 +23,10 @@ public enum EnumEnemy {
     0,
     0.0,
     "Lord Voldemort",
-    Arrays.asList(EnumSpell.FIREBALL)
+    Arrays.asList(EnumSpell.FIREBALL),
+    Enemy.class
   ),
+
   DeathEater(
     100,
     0.0,
@@ -23,9 +34,19 @@ public enum EnumEnemy {
     0,
     0.0,
     "Death Eater",
-    Arrays.asList(EnumSpell.FIREBALL)
+    Arrays.asList(EnumSpell.FIREBALL),
+    Enemy.class
   ),
-  Dementor(100, 0.0, 0, 0, 0.0, "Dementor", Arrays.asList(EnumSpell.FIREBALL)),
+  Dementor(
+    100,
+    0.0,
+    0,
+    0,
+    0.0,
+    "Dementor",
+    Arrays.asList(EnumSpell.FIREBALL),
+    Enemy.class
+  ),
   DoloresUmbridge(
     100,
     0.0,
@@ -33,7 +54,8 @@ public enum EnumEnemy {
     0,
     0.0,
     "Dolores Umbridge",
-    Arrays.asList(EnumSpell.FIREBALL)
+    Arrays.asList(EnumSpell.FIREBALL),
+    Enemy.class
   ),
   BellatrixLestrange(
     100,
@@ -42,9 +64,19 @@ public enum EnumEnemy {
     0,
     0.0,
     "Bellatrix Lestrange",
-    Arrays.asList(EnumSpell.FIREBALL)
+    Arrays.asList(EnumSpell.FIREBALL),
+    Enemy.class
   ),
-  Basilic(100, 0.0, 0, 0, 0.0, "Basilic", Arrays.asList(EnumSpell.FIREBALL));
+  Basilic(
+    100,
+    0.0,
+    0,
+    0,
+    0.0,
+    "Basilic",
+    Arrays.asList(EnumSpell.FIREBALL),
+    Basilic.class
+  );
 
   private int lifepoint;
   private double defense;
@@ -53,6 +85,7 @@ public enum EnumEnemy {
   private double damage;
   private String enemyname;
   private List<EnumSpell> spellList;
+  private Class<? extends AbsEnemy> enemyclass;
 
   EnumEnemy(
     int lifepoint,
@@ -61,7 +94,8 @@ public enum EnumEnemy {
     int precision,
     double damage,
     String enemyname,
-    List<EnumSpell> spellList
+    List<EnumSpell> spellList,
+    Class<? extends AbsEnemy> enemyclass
   ) {
     this.lifepoint = lifepoint;
     this.defense = defense;
@@ -70,6 +104,15 @@ public enum EnumEnemy {
     this.damage = damage;
     this.enemyname = enemyname;
     this.spellList = new ArrayList<>();
+    this.enemyclass = enemyclass;
+  }
+
+  public Class<? extends AbsEnemy> getEnemyclass() {
+    return enemyclass;
+  }
+
+  public void setEnemyclass(Class<? extends AbsEnemy> enemyclass) {
+    this.enemyclass = enemyclass;
   }
 
   public int getLifepoint() {
