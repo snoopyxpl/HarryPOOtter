@@ -1,3 +1,3 @@
 package main.java.Game.levels;
 
-public class levels {}
+public class Levels extends AbsLevels {}

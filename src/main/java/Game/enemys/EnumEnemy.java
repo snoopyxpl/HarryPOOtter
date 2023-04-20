@@ -76,6 +76,16 @@ public enum EnumEnemy {
     "Basilic",
     Arrays.asList(EnumSpell.FIREBALL),
     Basilic.class
+  ),
+  PeterPetigrow(
+    100,
+    0.0,
+    0,
+    0,
+    0.0,
+    "Peter Petigrow",
+    Arrays.asList(EnumSpell.FIREBALL),
+    Enemy.class
   );
 
   private int lifepoint;
