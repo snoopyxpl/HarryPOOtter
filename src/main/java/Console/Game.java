@@ -1,5 +1,3 @@
 package main.java.Console;
 
-public class Game {
-    
-}
+public class Game {}

@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Shop {
-    private List<Potion> potions;
 
-    public Shop(List<Potion> potions) {
-        this.potions = new ArrayList<>();
-    }
+  private List<Potion> potions;
 
-    public List<Potion> getPotions() {
-        return this.potions;
-    }
+  public Shop(List<Potion> potions) {
+    this.potions = new ArrayList<>();
+  }
 
-    public void setPotions(List<Potion> potions) {
-        this.potions = potions;
-    }
+  public List<Potion> getPotions() {
+    return this.potions;
+  }
 
+  public void setPotions(List<Potion> potions) {
+    this.potions = potions;
+  }
 }

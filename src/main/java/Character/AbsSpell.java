@@ -1,4 +1,3 @@
 package main.java.Character;
 
-public abstract class AbsSpell  {
-}
+public abstract class AbsSpell {}
