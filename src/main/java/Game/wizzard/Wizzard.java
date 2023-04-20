@@ -287,5 +287,4 @@ public class Wizzard {
     setLifepoint((int) lifepoint);
     return lifepoint;
   }
-  //TODO: add method: attack
 }
