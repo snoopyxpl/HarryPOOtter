@@ -2,6 +2,7 @@ package main.java.Character;
 
 import java.util.ArrayList;
 import java.util.List;
+import main.java.Character.potions.Potion;
 
 public class Shop {
 

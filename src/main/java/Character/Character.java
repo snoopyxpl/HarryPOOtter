@@ -1,5 +1,7 @@
 package main.java.Character;
 
+import main.java.Character.spell.Spell;
+
 public abstract class Character {
 
   private int lifepoint;
@@ -160,4 +162,5 @@ public abstract class Character {
     double lifepoint = damage * 1 - (damageresitance / 100);
     return lifepoint;
   }
+  //TODO: add method: attack
 }
