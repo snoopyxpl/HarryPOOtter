@@ -1,7 +1,12 @@
-package main.java.Character;
+package main.java.Character.wizzard;
 
 import java.util.ArrayList;
 import java.util.List;
+import main.java.Character.Character;
+import main.java.Character.potions.PotionType;
+import main.java.Character.spell.EnumSpell;
+import main.java.Character.spell.ForbiddenSpell;
+import main.java.Character.spell.Spell;
 
 public class Wizzard extends Character {
 
@@ -152,4 +157,5 @@ public class Wizzard extends Character {
       System.out.println("You cannot master this spell.");
     }
   }
+  //TODO:use sorting hat for selcect house
 }
