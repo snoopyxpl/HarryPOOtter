@@ -1,5 +1,7 @@
 package main.java.Game.wizzard;
 
+import java.util.Objects;
+
 public class Wand {
 
   private Wood wood;
@@ -34,5 +36,41 @@ public class Wand {
 
   public void setLenght(double lenght) {
     this.lenght = lenght;
+  }
+
+  @Override
+  public String toString() {
+    return (
+      "{" +
+      " wood='" +
+      getWood() +
+      "'" +
+      ", core='" +
+      getCore() +
+      "'" +
+      ", lenght='" +
+      getLenght() +
+      "'" +
+      "}"
+    );
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o == this) return true;
+    if (!(o instanceof Wand)) {
+      return false;
+    }
+    Wand wand = (Wand) o;
+    return (
+      Objects.equals(wood, wand.wood) &&
+      Objects.equals(core, wand.core) &&
+      lenght == wand.lenght
+    );
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(wood, core, lenght);
   }
 }

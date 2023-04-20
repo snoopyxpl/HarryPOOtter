@@ -2,13 +2,12 @@ package main.java.Game.wizzard;
 
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Data;
+import java.util.Objects;
 import main.java.Game.potions.PotionType;
 import main.java.Game.spell.EnumSpell;
 import main.java.Game.spell.ForbiddenSpell;
 import main.java.Game.spell.Spell;
 
-@Data
 public class Wizzard {
 
   private String wizzardname;
@@ -75,6 +74,121 @@ public class Wizzard {
   public double getdamage(double damagebonus, Spell spell) {
     double damage = damagebonus * spell.getDamage();
     return damage;
+  }
+
+  @Override
+  public String toString() {
+    return (
+      "{" +
+      " wizzardname='" +
+      getWizzardname() +
+      "'" +
+      ", pet='" +
+      getPet() +
+      "'" +
+      ", wand='" +
+      getWand() +
+      "'" +
+      ", house='" +
+      getHouse() +
+      "'" +
+      ", potions='" +
+      getPotions() +
+      "'" +
+      ", masteredspell='" +
+      getMasteredSpells() +
+      "'" +
+      ", coins='" +
+      getCoins() +
+      "'" +
+      ", lifepoint='" +
+      getLifepoint() +
+      "'" +
+      ", damagereseitancebonus='" +
+      getDamagereseitancebonus() +
+      "'" +
+      ", damageresitance='" +
+      getDamageresitance() +
+      "'" +
+      ", defance='" +
+      getDefance() +
+      "'" +
+      ", damagebonus='" +
+      getDamagebonus() +
+      "'" +
+      ", spelldamage='" +
+      getSpelldamage() +
+      "'" +
+      ", potionbonus='" +
+      getPotionbonus() +
+      "'" +
+      ", precision='" +
+      getPrecision() +
+      "'" +
+      ", precisionsto='" +
+      getPrecisionsto() +
+      "'" +
+      ", precisionbonus='" +
+      getPrecisionbonus() +
+      "'" +
+      ", damage='" +
+      getDamage() +
+      "'" +
+      "}"
+    );
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o == this) return true;
+    if (!(o instanceof Wizzard)) {
+      return false;
+    }
+    Wizzard wizzard = (Wizzard) o;
+    return (
+      Objects.equals(wizzardname, wizzard.wizzardname) &&
+      Objects.equals(pet, wizzard.pet) &&
+      Objects.equals(wand, wizzard.wand) &&
+      Objects.equals(house, wizzard.house) &&
+      Objects.equals(potions, wizzard.potions) &&
+      Objects.equals(masteredspell, wizzard.masteredspell) &&
+      coins == wizzard.coins &&
+      lifepoint == wizzard.lifepoint &&
+      damagereseitancebonus == wizzard.damagereseitancebonus &&
+      damageresitance == wizzard.damageresitance &&
+      defance == wizzard.defance &&
+      damagebonus == wizzard.damagebonus &&
+      spelldamage == wizzard.spelldamage &&
+      potionbonus == wizzard.potionbonus &&
+      precision == wizzard.precision &&
+      precisionsto == wizzard.precisionsto &&
+      precisionbonus == wizzard.precisionbonus &&
+      damage == wizzard.damage
+    );
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(
+      wizzardname,
+      pet,
+      wand,
+      house,
+      potions,
+      masteredspell,
+      coins,
+      lifepoint,
+      damagereseitancebonus,
+      damageresitance,
+      defance,
+      damagebonus,
+      spelldamage,
+      potionbonus,
+      precision,
+      precisionsto,
+      precisionbonus,
+      damage
+    );
   }
 
   public double getresitance(
