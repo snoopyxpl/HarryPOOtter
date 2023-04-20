@@ -283,7 +283,8 @@ public class Wizzard {
   }
 
   public double damagetaken(double damage, double damageresitance) {
-    double lifepoint = damage * 1 - (damageresitance / 100);
+    double lifepoint = (damage * 1 - (damageresitance / 100));
+    setLifepoint((int) lifepoint);
     return lifepoint;
   }
   //TODO: add method: attack
