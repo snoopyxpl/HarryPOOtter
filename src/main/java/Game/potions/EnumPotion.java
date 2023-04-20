@@ -1,6 +1,6 @@
 package main.java.Game.potions;
 
-import main.java.Game.Character;
+import main.java.Game.wizzard.Wizzard;
 
 public enum EnumPotion {
   HEALING_POTION("Healing Potion", PotionType.Healing, 10, 10),
@@ -43,8 +43,8 @@ public enum EnumPotion {
     this.type = type;
   }
 
-  public void setValue(int value, Character character) {
-    this.value = value + character.getPotionbonus();
+  public void setValue(int value, Wizzard wizzard) {
+    this.value = value + wizzard.getPotionbonus();
   }
 
   public void setPrice(int price) {
