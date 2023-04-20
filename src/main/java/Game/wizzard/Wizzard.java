@@ -2,11 +2,13 @@ package main.java.Game.wizzard;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Data;
 import main.java.Game.potions.PotionType;
 import main.java.Game.spell.EnumSpell;
 import main.java.Game.spell.ForbiddenSpell;
 import main.java.Game.spell.Spell;
 
+@Data
 public class Wizzard {
 
   private String wizzardname;
