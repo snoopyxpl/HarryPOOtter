@@ -24,7 +24,7 @@ public class Spell extends AbsSpell {
   }
 
   public static List<Spell> getAllSpells() {
-    List<Spell> spells = new ArrayList<>();
+    List<Spell> spells = new ArrayList<Spell>();
     for (EnumSpell enumSpell : EnumSpell.values()) {
       spells.add(new Spell(enumSpell));
     }

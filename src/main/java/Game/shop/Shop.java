@@ -9,7 +9,7 @@ public class Shop {
   private List<Potion> potions;
 
   public Shop(List<Potion> potions) {
-    this.potions = new ArrayList<>();
+    this.potions = new ArrayList<Potion>();
   }
 
   public List<Potion> getPotions() {

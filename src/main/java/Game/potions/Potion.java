@@ -28,7 +28,7 @@ public class Potion extends AbsPotion {
   }
 
   public static List<Potion> GetAllPotions() {
-    List<Potion> potions = new ArrayList<>();
+    List<Potion> potions = new ArrayList<Potion>();
     for (EnumPotion enumPotion : EnumPotion.values()) {
       potions.add(new Potion(enumPotion));
     }
