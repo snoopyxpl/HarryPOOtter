@@ -3,7 +3,7 @@ package main.java.Game.potions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Potion {
+public class Potion extends AbsPotion {
 
   private final EnumPotion potionType;
 
