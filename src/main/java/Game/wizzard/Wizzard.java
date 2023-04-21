@@ -30,6 +30,26 @@ public class Wizzard {
   private double damage;
   private static final int MAX_POTIONS = 5;
 
+  /**
+   * @param wizzardname
+   * @param pet
+   * @param wand
+   * @param house
+   * @param potions
+   * @param coins
+   * @param lifepoint
+   * @param damagereseitancebonus
+   * @param damageresitance
+   * @param defance
+   * @param damagebonus
+   * @param spelldamage
+   * @param potionbonus
+   * @param precision
+   * @param precisionsto
+   * @param precisionbonus
+   * @param damage
+   * @param masteredspell
+   */
   public Wizzard(
     String wizzardname,
     Pet pet,
@@ -67,8 +87,8 @@ public class Wizzard {
     this.house = house;
     this.potions = potions;
     this.coins = coins;
-    this.potions = new ArrayList<>();
-    this.masteredspell = new ArrayList<>();
+    this.potions = new ArrayList<PotionType>(potions);
+    this.masteredspell = new ArrayList<Spell>(masteredspell);
   }
 
   public double getdamage(double damagebonus, Spell spell) {

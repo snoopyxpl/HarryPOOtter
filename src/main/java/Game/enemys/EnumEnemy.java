@@ -113,7 +113,7 @@ public enum EnumEnemy {
     this.precision = precision;
     this.damage = damage;
     this.enemyname = enemyname;
-    this.spellList = new ArrayList<>();
+    this.spellList = new ArrayList<EnumSpell>(spellList);
     this.enemyclass = enemyclass;
   }
 
