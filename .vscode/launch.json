@@ -8,6 +8,13 @@
             "type": "java",
             "name": "App",
             "request": "launch",
+            "mainClass": "main.java.App",
+            "projectName": "HarryPOOtter"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
             "mainClass": "main.java.Console.App",
             "projectName": "HarryPOOtter"
         },
