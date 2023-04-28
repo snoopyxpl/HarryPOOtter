@@ -423,4 +423,13 @@ public class Wizzard {
     setLifepoint((int) lifepoint);
     return lifepoint;
   }
+
+  public Spell getSpell(EnumSpell spell) {
+    for (Spell s : masteredspell) {
+      if (s.getSpell().equals(spell)) {
+        return s;
+      }
+    }
+    return null;
+  }
 }
